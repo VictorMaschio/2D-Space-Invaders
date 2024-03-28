@@ -94,22 +94,22 @@ class jeu():
         self.backPhoto2=ImageTk.PhotoImage(backimg2,master=self.cadreG)
         
         #Initialisation de l'image des tires du joueur
-        t1Image=Image.open("images/piou.png")
+        t1Image=Image.open("images/missile.png")
         t1img=t1Image.resize((15, 40))
         self.t1Photo=ImageTk.PhotoImage(t1img,master=self.cadreG)
         
         #Initialisation de l'image des tires des ennemies
-        t2Image=Image.open("images/piou2.png")
+        t2Image=Image.open("images/missile2.png")
         t2img=t2Image.resize((15, 40))
         self.t2Photo=ImageTk.PhotoImage(t2img,master=self.cadreG)
         
         #Initialisation de l'image des ennemies
-        v2Image=Image.open("images/vaisseau2.png")
+        v2Image=Image.open("images/ship2.png")
         v2img=v2Image.resize((100, 70))
         self.v2Photo=ImageTk.PhotoImage(v2img,master=self.cadreG)
         
         #initialisation de l'image du vaisseau du joueur
-        self.v1=cl.entity(850,940,100,70,"images/vaisseau1.png",3,'G')
+        self.v1=cl.entity(850,940,100,70,"images/ship1.png",3,'G')
         v1Image=Image.open(self.v1.image)
         v1img=v1Image.resize((self.v1.lenght, self.v1.height))
         self.v1Photo=ImageTk.PhotoImage(v1img,master=self.cadreG)
@@ -118,7 +118,7 @@ class jeu():
         self.IPhoto=[]
         for nb in [0,1,2,3]:
             nbString=str(nb)
-            I1Image=Image.open("images/Débris%s.png" % nbString)
+            I1Image=Image.open("images/asteroid%s.png" % nbString)
             I1img=I1Image.resize((150, 200))
             self.IPhoto.append(ImageTk.PhotoImage(I1img,master=self.cadreG))
         
@@ -232,19 +232,19 @@ class jeu():
         """
         if v.camp=="G":
             vitesse=-20
-            t1=cl.entity(0,0,15,40,"images/piou.png",1,"G")
-            imagePiou=self.t1Photo
+            t1=cl.entity(0,0,15,40,"images/missile.png",1,"G")
+            imageMissile=self.t1Photo
         else:
             vitesse=20
-            t1=cl.entity(0,0,15,40,"images/piou2.png",1,"M")
-            imagePiou=self.t2Photo
+            t1=cl.entity(0,0,15,40,"images/missile2.png",1,"M")
+            imageMissile=self.t2Photo
         if vitesse<0:
             posy=-60
         else:
             posy=60
         t1.x=v.x
         t1.y=v.y +posy
-        t1item=self.canvas.create_image(t1.x,t1.y,image=imagePiou)
+        t1item=self.canvas.create_image(t1.x,t1.y,image=imageMissile)
         t1.addItem(t1item)
         self.automove(vitesse,t1)
         return t1

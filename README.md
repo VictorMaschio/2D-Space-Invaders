@@ -1,16 +1,10 @@
-# Space-invadeur
-Victor Maschio Gabriel Paulet-Duprat 
+# Space Invader
+Victor Maschio Gabriel Paulet-Duprat
 
-https://github.com/VictorMaschio/2D-Space-Invaders
+In this space invaders game, we can move using 'q' and 'd' and shoot simultaneously with the 'space' key. The enemies are created from a level file and appear infinitely. They shoot randomly at regular intervals, fortunately, the player is protected by asteroids. If an enemy reaches the bottom of the screen or the player's lives drop to zero, the player loses the game. The score increases by 50 for each enemy killed.
 
-Dans ce space invaders nous pouvons nous déplacer grâce à 'q' et 'd' et tirer en même temps avec la touche 'espace'. Les enemies sont créés à partir d'un fichier de niveau et apparaisent à l'infini. Ceux-ci tirent aléatoirement à intervale régulier, heureusement le joueur est protégé par des astéroïdes. Si un enemie atteind le bas de l'écran ou que les vies du joueur tombent à zéro, le joueur perd la partie. Le score s'incrémente de 50 à chaque enemie tué.
+The quit button closes the window, and the new game button starts a new game.
 
-Le bouton quitter ferme la fenêtre et le bouton nouvelle partie en commence une nouvelle.
+Our space invaders are composed of a class file that contains the classes responsible for the execution of most elements of the program, such as the main window, canvas objects, etc. Of a file that contains functions for launching and creating objects, and a main file from which the project is launched.
 
-Notre space invadeurs est composé d'un fichier classe qui contient les classes l'éxecution de la majorité des éléments du programme tel que la fenetre principale,
-les objets du canvas, ext. D'un fichier qui contient des fonction de lancement et de création d'objet et d'un fichier main à partir duquel on lance le projet.
-
-After est une méthode récurssive multi-thread qui est utilisée dans nombreuse fontion tel que le tire, le déplacement enemie, le déplacement alliée, ect.
-Il y à une implémentation d'une liste avec les déplacement des enemies ainsi que le chargement du niveau qui turne en boucle.
-
-
+After is a recursive multi-threaded method used in numerous functions such as shooting, enemy movement, allied movement, etc. There is an implementation of a list with enemy movements as well as the level loading that loops.
